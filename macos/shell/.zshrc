@@ -74,6 +74,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# Customize prompt: add username@hostname
+PROMPT="%(?:%{$fg_bold[green]%}%n@%m ➜ :%{$fg_bold[red]%}%n@%m ➜ )"
+PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
