@@ -1,0 +1,28 @@
+# Machine-specific local overrides
+*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Sensitive files - NEVER commit these
+*.key
+*.pem
+id_rsa
+id_ed25519
+*.p12
+
+# API keys and tokens
+.env
+.env.*
+credentials.json
+token.json
+
+# Editor swap files
+*.swp
+*.swo
+*~
+
+# Claude Code local state
+.claude/
