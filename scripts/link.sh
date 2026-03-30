@@ -2,8 +2,6 @@
 # Symlink mapping for all configurations
 # Add new tool configs here following the safe_link pattern
 
-SCRIPTS_DIR="$(cd "$(dirname "$0")" && pwd)"
-source "$SCRIPTS_DIR/utils.sh"
 
 # Link shared (cross-platform) configs
 link_shared() {

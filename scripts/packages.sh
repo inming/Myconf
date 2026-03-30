@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # Package installation logic
 
-SCRIPTS_DIR="$(cd "$(dirname "$0")" && pwd)"
-source "$SCRIPTS_DIR/utils.sh"
 
 # Install packages for macOS
 install_macos_packages() {
