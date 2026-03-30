@@ -75,8 +75,16 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize prompt: add username@hostname
-PROMPT="%(?:%{$fg_bold[green]%}%n@%m ➜ :%{$fg_bold[red]%}%n@%m ➜ )"
-PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+PROMPT="%{$fg_bold[magenta]%}%n%{$reset_color%}@%{$fg_bold[yellow]%}%m%{$reset_color%} "
+PROMPT+="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+PROMPT+='%{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+
+# History search: type prefix + Up/Down to match history
+autoload -U history-beginning-search-backward history-beginning-search-forward
+zle -N history-beginning-search-backward
+zle -N history-beginning-search-forward
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 # User configuration
 
