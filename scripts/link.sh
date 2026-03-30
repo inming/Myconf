@@ -52,7 +52,6 @@ link_macos() {
 
     # Shell
     safe_link "$dir/macos/shell/.zshrc" "$HOME/.zshrc"
-    safe_link "$dir/macos/shell/.zprofile" "$HOME/.zprofile"
 
     # Karabiner
     safe_link "$dir/macos/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
@@ -118,7 +117,6 @@ unlink_all() {
     case "$os" in
         macos)
             safe_unlink "$dir/macos/shell/.zshrc" "$HOME/.zshrc"
-            safe_unlink "$dir/macos/shell/.zprofile" "$HOME/.zprofile"
             safe_unlink "$dir/macos/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
             safe_unlink "$dir/macos/iterm2/com.googlecode.iterm2.plist" \
                 "$HOME/Library/Preferences/com.googlecode.iterm2.plist"
