@@ -39,7 +39,7 @@ link_shared() {
     # Claude Code
     safe_link "$dir/shared/ai/claude-code/settings.json" "$HOME/.claude/settings.json"
     # OpenCode
-    safe_link "$dir/shared/ai/opencode/config.json" "$HOME/.config/opencode/config.json"
+    safe_link "$dir/shared/ai/opencode/opencode.json" "$HOME/.config/opencode/opencode.json"
 }
 
 # Link macOS-specific configs
@@ -107,7 +107,7 @@ unlink_all() {
     safe_unlink "$dir/shared/git/.gitconfig" "$HOME/.gitconfig"
     safe_unlink "$dir/shared/git/.gitignore_global" "$HOME/.gitignore_global"
     safe_unlink "$dir/shared/ai/claude-code/settings.json" "$HOME/.claude/settings.json"
-    safe_unlink "$dir/shared/ai/opencode/config.json" "$HOME/.config/opencode/config.json"
+    safe_unlink "$dir/shared/ai/opencode/opencode.json" "$HOME/.config/opencode/opencode.json"
 
     # Platform
     local os
